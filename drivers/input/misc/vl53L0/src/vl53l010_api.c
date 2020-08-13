@@ -1084,7 +1084,7 @@ VL53L0_Error VL53L010_GetMeasurementTimingBudgetMicroSeconds(VL53L0_DEV Dev,
 	VL53L0_Error Status = VL53L0_ERROR_NONE;
 	VL53L0_DeviceParameters_t CurrentParameters;
 	uint8_t CurrentVCSELPulsePeriod;
-	uint8_t CurrentVCSELPulsePeriodPClk;
+	uint8_t CurrentVCSELPulsePeriodPClk = 0;
 	uint16_t encodedTimeOut;
 	uint32_t RangATimingBudgetMicroSeconds = 0;
 	uint32_t RangBTimingBudgetMicroSeconds = 0;
