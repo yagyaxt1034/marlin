@@ -492,14 +492,13 @@ static ssize_t sockfs_getxattr(struct dentry *dentry,
 	error = -ENODATA;
 	if (!strncmp(name, XATTR_NAME_SOCKPROTONAME, XATTR_NAME_SOCKPROTONAME_LEN)) {
 		proto_name = dentry->d_name.name;
-		proto_size = strlen(proto_name);
 
 		if (value) {
 			error = -ERANGE;
 			if (proto_size + 1 > size)
 				goto out;
 
-			memcpy(value, proto_name, proto_size + 1);
+			strncpy(value, proto_name, strlen(value) + 1);
 		}
 		error = proto_size + 1;
 	}
