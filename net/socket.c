@@ -486,7 +486,7 @@ static ssize_t sockfs_getxattr(struct dentry *dentry,
 			       const char *name, void *value, size_t size)
 {
 	const char *proto_name;
-	size_t proto_size;
+	size_t proto_size = 0;
 	int error;
 
 	error = -ENODATA;
