@@ -34,7 +34,7 @@
 #define	WCD_CLSH_STATE_HPHL (0x01 << 1)
 #define	WCD_CLSH_STATE_HPHR (0x01 << 2)
 #define	WCD_CLSH_STATE_LO (0x01 << 3)
-#define WCD_CLSH_STATE_MAX 4
+#define WCD_CLSH_STATE_MAX 5
 #define NUM_CLSH_STATES_V2 (0x01 << WCD_CLSH_STATE_MAX)
 
 
