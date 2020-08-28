@@ -1298,7 +1298,7 @@ static void hdcp_lib_msg_recvd(struct hdcp_lib_handle *handle)
 		if ((rsp_buf->flag ==
 			HDCP_TXMTR_SUBSTATE_WAITING_FOR_RECIEVERID_LIST) &&
 						(rsp_buf->timeout > 0))
-			handle->repeater_flag = true;
+		handle->repeater_flag = true;
 		handle->update_stream = true;
 	}
 
