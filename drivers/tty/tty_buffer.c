@@ -370,7 +370,7 @@ EXPORT_SYMBOL(tty_insert_flip_string_flags);
 int __tty_insert_flip_char(struct tty_port *port, unsigned char ch, char flag)
 {
 	struct tty_buffer *tb = port->buf.tail;
-	int flags = (flag == TTY_NORMAL) ? TTYB_NORMAL : 0;
+//	int flags = (flag == TTY_NORMAL) ? TTYB_NORMAL : 0;
 
 	if (!tty_buffer_request_room(port, 1))
 		return 0;
